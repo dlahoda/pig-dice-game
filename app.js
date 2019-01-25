@@ -32,7 +32,7 @@ document.querySelector('#hold-btn').addEventListener('click', function(e) {
     document.querySelector('#total-' + activePlayer).textContent = scores[activePlayer];
 
     // Check winner
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       document.querySelector('#player-name-' + activePlayer).textContent = 'WINNER!';
       document.querySelector('.dice').style.display = 'none';
       
