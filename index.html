@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pig Dice Games</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="background">
+    <div class="container">
+      <div class="control">
+        <button id="new-game-btn" class="control__element mt-3">
+          <ion-icon name="add-circle-outline"></ion-icon>
+          <span class="control__text text-uppercase">New Game</span>
+        </button>
+        <img id="dice" class="dice mt-auto" src="">
+        <button id="roll-btn" class="control__element mt-auto mb-1">
+          <ion-icon name="repeat"></ion-icon>
+          <span class="control__text text-uppercase">Roll dice</span>
+        </button>
+        <button id="hold-btn" class="control__element mb-5">
+          <ion-icon name="download"></ion-icon>
+          <span class="control__text text-uppercase">Hold</span>
+        </button>
+      </div>
+      <div class="game__area">
+        <div id="player-0" class="player active">
+          <div>
+            <span id="player-name-0" class="player__title text-uppercase mt-5">Player 1</span>
+          </div>
+          <span id="total-0" class="player__total-score mt-auto">0</span>
+          <div class="player__round-score mt-auto mb-4">
+            <div class="round">
+                <span class="text-uppercase">current</span>
+                <span id="score-0" class="round__summary">0</span>
+            </div>
+          </div>
+        </div>
+        <div id="player-1" class="player">
+          <div>
+            <span id="player-name-1" class="player__title text-uppercase mt-5">Player 2</span>
+          </div>
+          <span id="total-1" class="player__total-score mt-auto">0</span>
+          <div class="player__round-score mt-auto mb-4">
+            <div class="round">
+                <span class="text-uppercase">current</span>
+                <span id="score-1" class="round__summary">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</body>
+</html>

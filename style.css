@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+:root {
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mt-n2 {
+  margin-top: -2rem;
+}
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+.pt-5 {
+  padding-top: 5rem;
+}
+.pb-2 {
+  padding-bottom: 2rem;
+}
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+}
+
+.control {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.control__element {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+.control__element:hover {
+  cursor: pointer;
+}
+
+.control__text {
+  margin-left: .2rem;
+}
+
+.dice {
+  display: none;
+  height: 150px;
+  width: 150px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.25);
+}
+
+.game__area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  width: 65vw;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
+}
+
+.player {
+  padding: 4rem 0;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.player__title {
+  display: inline;
+  position: relative;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.player__total-score {
+  font-size: 5rem;
+  color: crimson;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player__title { font-weight: 300; }
+
+.active .player__title::after {
+  content: "\2022";
+  font-size: 6rem;
+  position: absolute;
+  color: #EB4D4D;
+  margin-left: 4px;
+  line-height: 50px;
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player__title { font-weight: 300; color: #EB4D4D; }
+
+.round {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90px;
+  padding: .8rem 1.5rem;
+  background-color: crimson;
+  color: #fff;
+}
+
+.round__summary {
+  display: block;
+  font-size: 2rem;
+}
